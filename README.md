@@ -2,6 +2,8 @@
 
 ## VS Code users:
 
+**The extension is now available on the marketplace. Just search for MD407.** Please use that version over github releases.
+
 Install the extension from the [releases](https://github.com/SKyletoft/mop_templates/releases) page, along with [SimServer from gbgmv.se](http://gbgmv.se/studies.html#machprog).
 
 You install extensions in Visual Studio Code by hitting `Ctrl + Shift + P` and typing `Install from VSIX`.
