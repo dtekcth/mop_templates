@@ -1,12 +1,12 @@
 {
 	"name": "md407-code",
-	"displayName": "md407-code",
+	"displayName": "MD407 Integration",
 	"publisher": "skyletoft",
 	"description": "",
 	"repository": {
-		"url": "https://github.com/SKyletoft/mop_template"
+		"url": "https://github.com/SKyletoft/mop_templates"
 	},
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"engines": {
 		"vscode": "^1.57.0"
 	},
@@ -53,15 +53,23 @@
 			},
 			{
 				"command": "md407.new_basic",
-				"title": "Create new project from the Basic template"
+				"title": "MD407: Create new project from the Basic template"
+			},
+			{
+				"command": "md407.new_basic_2",
+				"title": "New"
 			},
 			{
 				"command": "md407.new_crt",
-				"title": "Create new project from the CRT template"
+				"title": "MD407: Create new project from the CRT template"
 			},
 			{
 				"command": "md407.download-gcc",
-				"title": "Download and install the complier toolchain"
+				"title": "MD407: Download and install the complier toolchain"
+			},
+			{
+				"command": "md407.clear-downloads",
+				"title": "MD407: Uninstall compiler toolchain"
 			}
 		],
 		"viewsContainers": {
@@ -102,6 +110,11 @@
 				},
 				{
 					"command": "md407.reload_projects",
+					"when": "view == md407-projects",
+					"group": "navigation"
+				},
+				{
+					"command": "md407.new_basic_2",
 					"when": "view == md407-projects",
 					"group": "navigation"
 				}
@@ -175,9 +188,7 @@
 		"comment-json": "^4.2.2",
 		"debug": "github:WebFreak001/code-debug",
 		"request": "^2.88.2",
-		"request-progress": "^3.0.0",
-		"vscode-debugadapter": "^1.51.0",
-		"vscode-debugprotocol": "^1.51.0"
+		"request-progress": "^3.0.0"
 	},
 	"extensionDependencies": [
 		"webfreak.debug",

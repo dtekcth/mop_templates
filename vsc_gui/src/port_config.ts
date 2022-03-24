@@ -1,8 +1,7 @@
 import * as vscode from 'vscode';
-import { MD407WinRsWrapper } from './native_com';
+import { MD407_WIN_RS } from './constants';
 
 type TreeItem = vscode.TreeItem;
-const { execSync, execFileSync } = require('child_process');
 
 export class PortConfig implements vscode.TreeDataProvider<TreeItem> {
 	constructor() { }
@@ -12,8 +11,7 @@ export class PortConfig implements vscode.TreeDataProvider<TreeItem> {
 	}
 
 	getChildren(element?: TreeItem): Thenable<TreeItem[]> {
-		const md407_win_rs = new MD407WinRsWrapper();
-		const query = md407_win_rs
+		const query = MD407_WIN_RS
 			.query()
 			.split('\n')
 			.filter((line: string) => line.length !== 0)
